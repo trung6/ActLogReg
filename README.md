@@ -15,7 +15,32 @@ Code repository for the paper:
 - ucimlrepo
 
 ## Running code
-Our code will be released soon!
+Our code is tested with Python 3.11, Tensorflow 2.15, Tensorflow Probability 0.23, CUDA 12.4. We run our query algorithm on a NVIDIA A40 GPU.
+- To obtain datasets, run
+```python data.py```
+
+- To obtain results for the ACED method, we refer readers to the official implementation at https://github.com/jifanz/ACED
+
+- To query passively, run
+```
+python passive.py
+```
+
+- To query using our algorithm, run
+`python ours.py --data <dataset_name> --nque <number of queries>`
+
+- To query using the leverage score sampling (lss) algorithm, run
+`python lss.py`
+
+- To obtain results for passive, lss, and our method, run
+`python logit_regress.py`
+
+- To produce classification accuracy plots, run
+```
+python plot.py
+```
+
+The code for leverage score sampling has been sourced from <a href="https://github.com/AgnivaC/SubsampledLogisticRegression">here</a>.
 
 ### Citation
 
